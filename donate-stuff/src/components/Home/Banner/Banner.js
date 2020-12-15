@@ -3,12 +3,16 @@ import {Link, Router} from 'react-router-dom';
 
 const Banner = () => {
     return(
-        <>
-            <h1 id="banner">Zacznij pomagać!</h1>
-            <h2>Oddaj niechciane rzeczy w zaufane ręce</h2>
-            <Link to="/signin">Oddaj rzeczy</Link>
-            <Link to="/signin">Zorganizuj zbiórkę</Link>
-        </>
+        <header className="header container">
+            <h1 id="banner" className="header-title">Zacznij pomagać!</h1>
+            <h2 className="header-title">Oddaj niechciane rzeczy w zaufane ręce</h2>
+            <div className="header-decor"></div>
+            <div className="header-cta">
+                <Link to="/signin" className="header-cta-btn">Oddaj rzeczy</Link>
+                <Link to="/signin" className="header-cta-btn">Zorganizuj zbiórkę</Link>
+            </div>
+            
+        </header>
     );
 }
 

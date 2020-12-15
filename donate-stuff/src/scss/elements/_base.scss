@@ -1,5 +1,6 @@
 body {
     font-family: $font-base;
+    color: $dark-grey;
 }
 
 a {
@@ -8,4 +9,9 @@ a {
 
 li {
     list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }

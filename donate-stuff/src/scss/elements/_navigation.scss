@@ -1,0 +1,47 @@
+/*mobile styles*/
+body {
+    font-size: 14px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-sign-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-menu-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.nav-sign-item {
+    padding: 10px 20px;
+    font-size: 0.8em;
+    border: 1px solid white;
+    &:hover {
+        border: 1px solid $yellowish;
+    }
+}
+
+.nav-menu-item {
+    padding: 10px 20px;
+    border: 1px solid white;
+    &:hover {
+        border: 1px solid $dark-grey;
+    }
+}
+
+/*tablet styles*/
+@media screen and (min-width: 500px) {
+
+}
+
+/*laptop styles*/
+@media screen and (min-width: 900px) {
+
+}
