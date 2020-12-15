@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-scroll';
 
 const NavMenu = () => {
     return(
@@ -6,19 +7,19 @@ const NavMenu = () => {
             <div>
                 <ul>
                     <li>
-                        <Link to="/">Start</Link>
+                        <Link to="banner" smooth={true} duration={800}>Start</Link>
                     </li>
                     <li>
-                        <Link to="/">O co chodzi?</Link>
+                        <Link to="steps" smooth={true} duration={800}>O co chodzi?</Link>
                     </li>
                     <li>
-                        <Link to="/">O nas</Link>
+                        <Link to="about-us" smooth={true} duration={800}>O nas</Link>
                     </li>
                     <li>
-                        <Link to="/">Fundacja i organizacje</Link>
+                        <Link Link to="receivers" smooth={true} duration={800}>Fundacja i organizacje</Link>
                     </li>
                     <li>
-                        <Link activeClass="active" to="#contact" spy={true} smooth={true} duration={500}>Kontakt</Link>
+                        <Link to="contact" smooth={true} duration={800}>Kontakt</Link>
                     </li>
                 </ul>
             </div>
