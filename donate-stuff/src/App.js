@@ -9,6 +9,9 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <p className="test">Testowy text sprawdzajacy colory i czcionki</p>
+        <p className="test2">A nawet DWA</p>
+
         <a
           className="App-link"
           href="https://reactjs.org"

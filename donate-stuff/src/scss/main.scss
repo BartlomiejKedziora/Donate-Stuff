@@ -1,0 +1,10 @@
+@import "./settings/fonts";
+@import "./settings/colors";
+@import "./generic/reset";
+@import "./elements/base";
+
+.test2 {
+    color: $brownie;
+    background-color: $light-blue;
+    font-family: $font-alt;
+}
