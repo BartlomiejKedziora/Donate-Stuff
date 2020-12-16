@@ -6,10 +6,17 @@ body {
 
 a {
     text-decoration: none;
+    font-family: $font-base;
+    color: $dark-grey;
 }
 
 li {
     list-style: none;
+}
+
+button {
+    font-family: $font-base;
+    color: $dark-grey;
 }
 
 .container {
