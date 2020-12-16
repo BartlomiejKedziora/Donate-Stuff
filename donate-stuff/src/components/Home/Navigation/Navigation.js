@@ -4,10 +4,10 @@ import NavSign from './NavSign';
 
 const Navigation = () => {
     return(
-        <div className="nav container">
+        <section className="nav container">
             <NavSign />
             <NavMenu />
-        </div>
+        </section>
     );
 }
 

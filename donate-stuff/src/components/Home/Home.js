@@ -6,7 +6,7 @@ import Footer from './Footer/Footer';
 import Navigation from './Navigation/Navigation';
 import Orange from './Orange/Orange';
 import FourSteps from './FourSteps/FourSteps';
-import Receivers from "./Receivers/Receivers"
+import Receivers from "./Receivers/Receivers";
 
 const Home = () => {
     return(

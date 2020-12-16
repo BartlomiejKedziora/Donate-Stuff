@@ -1,6 +1,7 @@
 body {
     font-family: $font-base;
     color: $dark-grey;
+    font-size: 14px;
 }
 
 a {
@@ -14,4 +15,22 @@ li {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/*mobile styles*/
+
+
+
+/*tablet styles*/
+@media screen and (min-width: 500px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/*laptop styles*/
+@media screen and (min-width: 900px) {
+    body {
+        font-size: 18px;
+    }
 }

@@ -1,0 +1,46 @@
+/*mobile styles*/
+
+.footer {
+    display: flex;
+    padding: 20px 0;
+}
+
+.footer-rights {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.footer-social {
+    display: flex;
+    position: absolute;
+    right: 30px;
+    padding: 10px 0;
+}
+
+.footer-social-icon {
+    width: 30px;
+    height: 30px;
+    padding: 0 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer-fb {
+    background-image: url(./../../assets/Facebook.svg);
+}
+
+.footer-insta {
+    background-image: url(./../../assets/Instagram.svg);
+}
+
+/*tablet styles*/
+@media screen and (min-width: 500px) {
+
+}
+
+/*laptop styles*/
+@media screen and (min-width: 900px) {
+
+}

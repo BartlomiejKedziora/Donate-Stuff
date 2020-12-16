@@ -1,11 +1,11 @@
 /*mobile styles*/
 
-.header {
+.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 0 50px 0;
-    background-image: url(./../../assets/Home-Hero-Image.jpg);
+    padding: 20px 0;
+    background-image: url(./../../assets/Background-Contact-Form.jpg);
     background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
@@ -21,14 +21,14 @@
     }
 }
 
-.header-title {
+.contact-title {
     font-size: 2em;
     text-align: center;
     padding: 10px 20px;
     z-index: 5;
 }
 
-.header-decor {
+.contact-decor {
     background-image: url(./../../assets/Decoration.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -37,22 +37,39 @@
     z-index: 5;
 }
 
-.header-cta {
-    display: flex;
-    justify-content: space-around;
+.contact-form {
     z-index: 5;
-    padding: 20px 0;
 }
 
-.header-cta-btn {
-    width: 30%;
-    padding: 10px 10px;
+.contact-form-label {
+    font-family: $font-alt;
+    font-weight: 700;
+    font-size: 0.8em;
+    margin-top: 10px;
+    padding-left: 10px;
+    background: transparent;
+}
+
+.contact-form-item {
+    width: 98%;
+    margin: 0 auto;
+    line-height: 2em;
+    border: none;
+    border-bottom: 1px solid $light-grey;
+    margin-bottom: 20px;
+    background: transparent;
+
+    &::placeholder {
+        color: #a2a2a2;
+    }
+}
+
+.contact-form-btn {
+    float: right;
+    margin-right: 30px;
+    background-color: white;
+    padding: 10px 20px;
     border: 1px solid $dark-grey;
-    text-align: center;
-    text-transform: uppercase;
-    color: $dark-grey;
-    font-size: 1.4em;
-    z-index: 5;
 }
 
 /*tablet styles*/

@@ -1,0 +1,97 @@
+/*mobile styles*/
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.steps-title {
+    font-size: 2em;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.steps-decor {
+    background-image: url(./../../assets/Decoration.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 80px;
+}
+
+.steps-intructions {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $light-blue;
+    margin: 0 auto;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+}
+
+.steps-intructions-col {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.steps-intructions-img {
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-size: contain;
+}
+
+.steps-img1 {
+    background-image: url(./../../assets/Icon-1.svg);
+}
+
+.steps-img2 {
+    background-image: url(./../../assets/Icon-2.svg);
+}
+
+.steps-img3 {
+    background-image: url(./../../assets/Icon-3.svg);
+}
+
+.steps-img4 {
+    background-image: url(./../../assets/Icon-4.svg);
+}
+
+.steps-intructions-title {
+    padding: 10px;
+    text-align: center;
+}
+
+.steps-intructions-line {
+    width: 60%;
+    border-bottom: 2px solid $light-grey;
+}
+
+.steps-intructions-text {
+    padding: 10px;
+    text-align: center;
+}
+
+.steps-intructions-cta-btn {
+    padding: 10px 10px;
+    border: 1px solid $light-grey;
+    text-align: center;
+    text-transform: uppercase;
+    color: $dark-grey;
+    font-size: 1.4em;
+}
+
+/*tablet styles*/
+@media screen and (min-width: 500px) {
+
+}
+
+/*laptop styles*/
+@media screen and (min-width: 900px) {
+
+}
