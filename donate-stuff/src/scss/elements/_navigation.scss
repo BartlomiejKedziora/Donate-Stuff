@@ -1,7 +1,4 @@
 /*mobile styles*/
-body {
-    font-size: 14px;
-}
 
 .nav {
     display: flex;
@@ -11,12 +8,15 @@ body {
 .nav-sign-list {
     display: flex;
     justify-content: space-around;
+    padding: 20px 0 10px 0;
 }
 
 .nav-menu-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    cursor: pointer;
+    padding-bottom: 10px;
 }
 
 .nav-sign-item {
@@ -39,9 +39,20 @@ body {
 /*tablet styles*/
 @media screen and (min-width: 500px) {
 
+    .nav-sign-list {
+        justify-content: flex-end;
+    }
+
+    .nav-menu-list {
+        justify-content: flex-end;
+    }
+
 }
 
 /*laptop styles*/
 @media screen and (min-width: 900px) {
-
+    .nav-menu-list {
+        z-index: 5;
+        position: relative;
+    }
 }

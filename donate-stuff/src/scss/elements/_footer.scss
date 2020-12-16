@@ -25,6 +25,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
 }
 
 .footer-fb {
@@ -43,4 +44,9 @@
 /*laptop styles*/
 @media screen and (min-width: 900px) {
 
+    .footer-social {
+        position: relative;
+        right: 100px;
+        padding: 10px 0;
+    }
 }

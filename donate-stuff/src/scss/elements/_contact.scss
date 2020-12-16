@@ -5,9 +5,12 @@
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
+
+    @media screen and (max-width: 899px) {
+
     background-image: url(./../../assets/Background-Contact-Form.jpg);
-    background-position: bottom;
-    background-size: contain;
+    background-position: left;
+    background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     z-index: 1;
@@ -18,6 +21,7 @@
         top: 0; bottom: 0;
         background: rgba(255,255,255,0.85);
         z-index: 2;
+        }
     }
 }
 
@@ -79,5 +83,32 @@
 
 /*laptop styles*/
 @media screen and (min-width: 900px) {
+    .contact {
+        background-image:none;
+        width: 35%;
+        margin-left: 55%;
+        margin-right: 10%;
+    }
 
+    .contact-title {
+        width: 100%;
+    }
+
+    .contact-bckg {
+        padding-top: 40px;
+        background-image: url(./../../assets/Background-Contact-Form.jpg);
+        background-position: top left;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 1;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0; right: 0;
+            top: 0; bottom: 0;
+            background: rgba(255,255,255,0.85);
+            z-index: 2;
+        }
+    }
 }

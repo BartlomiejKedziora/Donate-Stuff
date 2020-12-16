@@ -18,7 +18,7 @@
 }
 
 .orange-title {
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-transform: uppercase;
     padding: 15px 0;
 }
@@ -30,9 +30,25 @@
 /*tablet styles*/
 @media screen and (min-width: 500px) {
 
+    .orange-article {
+        width: 70%;
+        padding: 20px 60px;
+    }
 }
 
 /*laptop styles*/
 @media screen and (min-width: 900px) {
+    .orange {
+        flex-direction: unset;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px 0;
+    }
 
+    .orange-article {
+        width: 250px;
+        padding: 20px 30px;
+        display: flex;
+        flex-direction: column;
+    }
 }

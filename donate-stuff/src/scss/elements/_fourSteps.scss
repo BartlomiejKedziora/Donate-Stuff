@@ -8,6 +8,7 @@
 }
 
 .steps-title {
+    margin-top: 30px;
     font-size: 2em;
     text-align: center;
     padding: 10px 20px;
@@ -27,7 +28,7 @@
     background-color: $light-blue;
     margin: 0 auto;
     padding: 30px 20px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .steps-intructions-col {
@@ -89,6 +90,10 @@
 /*tablet styles*/
 @media screen and (min-width: 500px) {
 
+    .steps-intructions {
+        width: 100%;
+        padding: 30px 0;
+    }
 }
 
 /*laptop styles*/

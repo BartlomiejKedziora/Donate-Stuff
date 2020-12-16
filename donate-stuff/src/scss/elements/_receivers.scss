@@ -23,12 +23,14 @@
 
 .receivers-groups {
     display: flex;
-    justify-content: space-around;
-    padding: 0 40px;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 0 5px;
+
 }
 
 .receivers-groups-item {
-    padding: 10px 20px;
+    padding: 10px 10px;
     text-align: center;
 }
 
@@ -59,12 +61,29 @@
     padding: 5px 0;
 }
 
+.receivers-list-item-right {
+    text-align: right;
+}
+
 /*tablet styles*/
 @media screen and (min-width: 500px) {
 
+    .receivers-groups {
+        width: 70%;
+    }
+
+    .receivers-text {
+        width: 70%;
+    }
+
+    .receivers-list {
+        width: 70%;
+    }
 }
 
 /*laptop styles*/
 @media screen and (min-width: 900px) {
-
+    .receivers-text {
+        width: 50%;
+    }
 }
