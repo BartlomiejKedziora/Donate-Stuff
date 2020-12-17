@@ -30,8 +30,15 @@
 }
 
 .receivers-groups-item {
-    padding: 10px 10px;
+    padding: 10px;
     text-align: center;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+/*border appearing onClick in Receivers*/
+.borderLink {
+    border: 1px solid $dark-grey;
 }
 
 .receivers-text {
