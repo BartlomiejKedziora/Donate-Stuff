@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import Pagination from './../Pagination/Pagination';
+
 
 const Org = () => {
 
@@ -41,12 +44,23 @@ const Org = () => {
         }
     ];
 
+    const [orgToShow, setOrgToShow] = useState(allOrgList.slice(0,3));
+    const [numbActive, setNumbActive] = useState(1);
+
+
+    const listLength = allOrgList.length;
+
+    const showElements = (fromIndex, toIndex, title) => {
+        setOrgToShow(allOrgList.slice(fromIndex, toIndex));
+        setNumbActive(title);
+    }
+
     return(
         <>
             <div className="receivers-list">
-                {allOrgList.map(el => {
+                {orgToShow.map(el => {
                     return(
-                <div className="receivers-list-item">
+                <div key={el.id} className="receivers-list-item">
                     <div className="receivers-list-item-left">
                         <p className="receivers-list-item-name">{el.name}</p>
                         <p className="receivers-list-item-info">{el.description}</p>
@@ -56,7 +70,14 @@ const Org = () => {
                     );
                 })}
             </div>
-            <div className="receivers-list-number">1</div>
+            <div className="receivers-list-number">
+                <Pagination 
+                    qtyOnPage={3}
+                    totalQuantity={listLength}
+                    changePageFn={showElements}
+                    numbActive={numbActive}
+                />
+            </div>
         </>
     );
 }

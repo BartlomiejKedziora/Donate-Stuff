@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Pagination from './../Pagination/Pagination';
 
 const Fund = () => {
 
@@ -53,23 +54,39 @@ const Fund = () => {
         }
     ];
 
+    const [fundationsToShow, setFundationToShow] = useState(allFundList.slice(0,3));
+    const [numbActive, setNumbActive] = useState(1);
+  
+    const listLength = allFundList.length;
+
+    const showElements = (fromIndex, toIndex, title) => {
+        setFundationToShow(allFundList.slice(fromIndex, toIndex));
+        setNumbActive(title);
+    }
 
     return(
         <>
-        <div className="receivers-list">
-            {allFundList.map(el => {
-                return(
-            <div className="receivers-list-item">
-                <div className="receivers-list-item-left">
-                    <p className="receivers-list-item-name">{el.name}</p>
-                    <p className="receivers-list-item-info">{el.description}</p>
-                </div>
-                <p className="receivers-list-item-right">{el.address}</p>
+            <div className="receivers-list">
+                {fundationsToShow.map(el => {
+                    return(
+                        <div key={el.id} className="receivers-list-item">
+                            <div className="receivers-list-item-left">
+                                <p className="receivers-list-item-name">{el.name}</p>
+                                <p className="receivers-list-item-info">{el.description}</p>
+                            </div>
+                            <p className="receivers-list-item-right">{el.address}</p>
+                        </div>
+                            );
+                })}
             </div>
-                );
-            })}
-        </div>
-        <div className="receivers-list-number">1</div>
+            <div className="receivers-list-number">
+                <Pagination 
+                    qtyOnPage={3}
+                    totalQuantity={listLength}
+                    changePageFn={showElements}
+                    numbActive={numbActive}
+                />
+            </div>
         </>
     );
 }

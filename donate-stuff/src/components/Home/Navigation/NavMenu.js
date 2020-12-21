@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-scroll';
+import {HashLink} from 'react-router-hash-link';  
 
 const NavMenu = () => {
     return(
@@ -7,19 +7,19 @@ const NavMenu = () => {
             <nav className="nav-menu">
                 <ul className="nav-menu-list">
                     <li className="nav-menu-item">
-                        <Link to="banner" smooth={true} duration={800}>Start</Link>
+                        <HashLink smooth to="/#banner">Start</HashLink>
                     </li>
                     <li className="nav-menu-item">
-                        <Link to="steps" smooth={true} duration={800}>O co chodzi?</Link>
+                        <HashLink smooth to="/#steps">O co chodzi?</HashLink>
                     </li>
                     <li className="nav-menu-item">
-                        <Link to="about-us" smooth={true} duration={800}>O nas</Link>
+                        <HashLink smooth to="/#about-us">O nas</HashLink>
                     </li>
                     <li className="nav-menu-item">
-                        <Link Link to="receivers" smooth={true} duration={800}>Fundacja i organizacje</Link>
+                        <HashLink smooth to="/#receivers">Fundacja i organizacje</HashLink>
                     </li>
                     <li className="nav-menu-item">
-                        <Link to="contact" smooth={true} duration={800}>Kontakt</Link>
+                        <HashLink smooth to="/#contact">Kontakt</HashLink>
                     </li>
                 </ul>
             </nav>

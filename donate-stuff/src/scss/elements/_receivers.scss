@@ -36,6 +36,16 @@
     border: 1px solid white;
 }
 
+.receivers-list-number a {
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.receivers-list-number-border {
+    border: 1px solid $light-grey;
+}
+
+
 /*border appearing onClick in Receivers*/
 .borderLink {
     border: 1px solid $dark-grey;
