@@ -29,9 +29,30 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+
+        /*send form via EmailJS*/
+        const data = {
+            service_id: 'gmail',
+            template_id: 'template_evpmesg',
+            user_id: 'user_Q5MsBWQ6HAqS2qTmb3uB7',
+            template_params: contactForm
+        };
+
+        fetch('https://api.emailjs.com/api/v1.0/email/send', {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => console.log(res))
+        .catch(err => console.log(err));
+
         /*reset form*/
         setContactForm(initialState);
     } 
+
+        
     
     /*form validation*/
 
