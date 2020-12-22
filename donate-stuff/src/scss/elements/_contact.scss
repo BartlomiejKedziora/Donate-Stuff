@@ -76,6 +76,13 @@
     border: 1px solid $dark-grey;
 }
 
+.contact-form-err {
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
 /*tablet styles*/
 @media screen and (min-width: 500px) {
 

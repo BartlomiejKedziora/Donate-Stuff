@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import ErrorMessage from './ErrorMessage';
 
 
 const Contact = () => {
 
+    const [formError, setFormError] = useState(null);
     const [contactForm, setContactForm] = useState({
         name: "",
         email: "",
@@ -26,9 +28,38 @@ const Contact = () => {
         });
     };
 
+    const validate = (contactForm) => {
+        if(!contactForm.email) {
+            return "Email jest wymagany";
+        }
+        
+        if(!contactForm.name) {
+            return "Imię jest wymagane";
+        } 
+        // else if(/^[A-Za-z]+$/.test(contactForm.name)) {
+        //     return "Podaj tylko litery";
+        // }
+         else if(contactForm.name.length < 3) {
+            return "Imię jest za krótkie";
+        }
+
+        if(contactForm.message.length < 10) {
+            return "Wiadomość musi mieć min. 10 znaków";
+        }
+
+        return null;
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        /*form validation*/
+        const errorMsg = validate(contactForm)
+        if(errorMsg) {
+            setFormError(errorMsg)
+            console.log("błąd");
+            return
+        }
 
         /*send form via EmailJS*/
         const data = {
@@ -48,32 +79,10 @@ const Contact = () => {
         .then(res => console.log(res))
         .catch(err => console.log(err));
 
-        /*reset form*/
+        /*reset form, reset error msg*/
         setContactForm(initialState);
+        setFormError(null);
     } 
-
-        
-    
-    /*form validation*/
-
-    // const nameValidation = (fieldName, fieldValue) => {
-    //     if (fieldValue.trim() === "") {
-    //         return 'Podaj imię';
-    //     }
-    //     if (/[^a-zA-Z -]/.test(fieldValue)) {
-    //         return 'Podaj tylko litery';
-    //       }
-    //     if (fieldValue.trim().length < 3) {
-    //     return `${fieldName} needs to be at least three characters`;
-    //     }
-    //     return null;
-    // };
-
-    // const validate = {
-    //     name: name => nameValidation('First Name', name),
-    //   };
-      
-
 
     return(
         <>
@@ -95,6 +104,7 @@ const Contact = () => {
                                 <textarea type="text" name="message" value={contactForm.message} onChange={handleChange} className="contact-form-item" placeholder="Chciałbym przekazać ..." />
                             </label>
                         </div>
+                        {formError && <ErrorMessage formError={formError} />}
                         <button type="submit" className="contact-form-btn">Wyślij</button>
                     </form>
                 </div>
