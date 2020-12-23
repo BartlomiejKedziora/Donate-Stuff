@@ -1,17 +1,19 @@
 import { Link } from 'react-router-dom';
+import {HashLink} from 'react-router-hash-link';  
 
 const NavLoggedIn = () => {
+
     return(
         <>
-            <div className="nav-sign">
-                <ul className="nav-sign-list">
-                    <li className="nav-sign-item">
-                        <p className="nav-sign-item">Użytkownik</p>
+            <div className="nav-logged">
+                <ul className="nav-logged-list">
+                    <li className="nav-logged-item">
+                        <p>ccc</p>
                     </li>
-                    <li className="nav-sign-item">
-                        <Link to="/donate-stuff">Oddaj rzeczy</Link>
+                    <li className="nav-logged-item">
+                        <HashLink smooth to="/donate-stuff/#donate-form">Oddaj rzeczy</HashLink>
                     </li>
-                    <li className="nav-sign-item">
+                    <li className="nav-logged-item">
                         <Link to="/signout">Wyloguj</Link>
                     </li>
                 </ul>

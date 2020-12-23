@@ -5,21 +5,13 @@
     flex-direction: column;
 }
 
-.nav-sign-list {
+.nav-logged-list {
     display: flex;
     justify-content: space-around;
     padding: 20px 0 10px 0;
 }
 
-.nav-menu-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    cursor: pointer;
-    padding-bottom: 10px;
-}
-
-.nav-sign-item {
+.nav-logged-item {
     padding: 10px 20px;
     font-size: 0.8em;
     border: 1px solid white;
@@ -28,31 +20,12 @@
     }
 }
 
-.nav-menu-item {
-    padding: 10px 20px;
-    border: 1px solid white;
-    &:hover {
-        border: 1px solid $dark-grey;
-    }
-}
 
 /*tablet styles*/
 @media screen and (min-width: 500px) {
 
-    .nav-sign-list {
+    .nav-logged-list {
         justify-content: flex-end;
     }
 
-    .nav-menu-list {
-        justify-content: flex-end;
-    }
-
-}
-
-/*laptop styles*/
-@media screen and (min-width: 900px) {
-    .nav-menu-list {
-        z-index: 5;
-        position: relative;
-    }
 }
