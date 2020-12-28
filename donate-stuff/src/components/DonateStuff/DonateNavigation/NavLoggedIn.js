@@ -1,7 +1,24 @@
-import { Link } from 'react-router-dom';
-import {HashLink} from 'react-router-hash-link';  
+import React, { useContext, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import {HashLink} from 'react-router-hash-link';
+import { FirebaseContext } from './../../Firebase/index';
+
 
 const NavLoggedIn = () => {
+
+    const firebase = useContext(FirebaseContext);
+    const history = useHistory();
+
+    const handleClick = (e) => {
+        /*firebase auth*/
+        firebase.doSignOut
+            .then(authUser => {
+                history.push('/signout');
+            })
+            .catch(error => {
+                console.log("błąd");
+            });     
+    }
 
     return(
         <>
@@ -14,7 +31,7 @@ const NavLoggedIn = () => {
                         <HashLink smooth to="/donate-stuff/#donate-form">Oddaj rzeczy</HashLink>
                     </li>
                     <li className="nav-logged-item">
-                        <Link to="/signout">Wyloguj</Link>
+                        <Link to="/signout" noClick={handleClick}>Wyloguj</Link>
                     </li>
                 </ul>
             </div>

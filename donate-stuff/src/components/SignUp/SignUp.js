@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from './../Home/Navigation/Navigation';
 import ErrorMessage from './../Home/Contact/ErrorMessage';
+import { FirebaseContext } from '../Firebase/index';
+import { useHistory } from "react-router-dom";
 
 
 const SignUp = () => {
-
+    const firebase = useContext(FirebaseContext);
+    const history = useHistory();
+    
     const [formError, setFormError] = useState(null);
     const [signUpForm, setSignUpForm] = useState({
         email: "",
@@ -29,13 +33,17 @@ const SignUp = () => {
         });
     };
 
-    const validate = (signInForm) => {
+    const validate = (signUpForm) => {
         if(!signUpForm.email) {
             return "Email jest wymagany";
         }
         
         if(!signUpForm.password) {
             return "Hasło jest wymagane";
+        } 
+
+        if(signUpForm.password.length < 6) {
+            return "Hasło jest za krótkie";
         } 
         
         if(!signUpForm.passwordCheck) {
@@ -59,16 +67,26 @@ const SignUp = () => {
         }
 
         console.log(signUpForm);
-        
-        /*reset form, reset error msg*/
-        setSignUpForm(initialState);
-        setFormError(null);
+
+        /*firebase auth*/
+        firebase.doCreateUserWithEmailAndPassword(signUpForm.email, signUpForm.password)
+            .then(authUser => {
+                /*reset form, reset error msg*/
+                setSignUpForm(initialState);
+                setFormError(null);
+                history.push('/donate-stuff');
+            })
+            .catch(error => {
+                setFormError("Email lub hasło jest niepoprawne");
+                console.log("błąd");
+            });
     }
+    
 
     return(
         <>
             <Navigation />
-            <section class="signup container">
+            <section className="signup container">
                 <h2 className="signup-title">Załóż konto</h2>
                 <div className="signup-decor"></div>
                 <form onSubmit={handleSubmit} className="signup-form">
@@ -88,7 +106,7 @@ const SignUp = () => {
                     <Link to="/signin" className="signup-form-btn">Zaloguj się</Link>
                     <button className="signup-form-btn">Załóż konto</button>
                 </div>
-                </form>
+                </form>    
             </section>  
         </>
     );

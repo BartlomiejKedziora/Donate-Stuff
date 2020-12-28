@@ -7,7 +7,7 @@ const SignOut = () => {
     return(
         <>
             <Navigation />
-            <section class="signout container">
+            <section className="signout container">
                 <h2 className="signout-title">Wylogowanie nastąpiło pomyślnie!</h2>
                 <div className="signout-decor"></div>
                 <Link to="/" className="signout-form-btn">Strona główna</Link>

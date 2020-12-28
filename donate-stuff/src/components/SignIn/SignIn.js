@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from './../Home/Navigation/Navigation';
 import ErrorMessage from './../Home/Contact/ErrorMessage';
 import NavLoggedIn from '../DonateStuff/DonateNavigation/NavLoggedIn';
+import { useHistory } from "react-router-dom";
+import { FirebaseContext } from '../Firebase/index';
+
 
 const SignIn = () => {
 
-    const userEmail = "";
+    const firebase = useContext(FirebaseContext);
+    const history = useHistory();
 
     const [formError, setFormError] = useState(null);
     const [signInForm, setSignInForm] = useState({
@@ -38,7 +42,7 @@ const SignIn = () => {
             return "Hasło jest wymagane";
         } 
          else if(signInForm.password.length < 5) {
-            return "Hasło musi mieć min.5 znaków";
+            return "Hasło musi mieć min.6 znaków";
         }
 
         return null;
@@ -57,9 +61,18 @@ const SignIn = () => {
 
         console.log(signInForm);
         
-        /*reset form, reset error msg*/
-        setSignInForm(initialState);
-        setFormError(null);
+        /*firebase auth*/
+        firebase.doSignInWithEmailAndPassword(signInForm.email, signInForm.password)
+            .then(authUser => {
+                /*reset form, reset error msg*/
+                setSignInForm(initialState);
+                setFormError(null);
+                history.push('/donate-stuff');
+            })
+            .catch(error => {
+                setFormError(errorMsg)
+                console.log("błąd");
+            });        
     }
 
     return(
