@@ -5,18 +5,22 @@ import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
 import SignOut from './components/SignOut/SignOut';
 import DonateStuff from './components/DonateStuff/DonateStuff';
+import AuthProvider from './components/Auth/Auth';
+import PrivateRoute from './components/Auth/PrivateRoute';
 
 const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/signin' component={SignIn} />
-        <Route path='/signup' component={SignUp} />
-        <Route path='/signout' component={SignOut} />
-        <Route path='/donate-stuff' component={DonateStuff} />
-      </Switch>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/signin' component={SignIn} />
+          <Route path='/signup' component={SignUp} />
+          <Route path='/signout' component={SignOut} />
+          <PrivateRoute path='/donate-stuff' component={DonateStuff} />
+        </Switch>
+      </Router>
+    </AuthProvider>
   );
 }
 

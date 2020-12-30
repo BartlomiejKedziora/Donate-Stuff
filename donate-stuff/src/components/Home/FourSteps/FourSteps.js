@@ -33,7 +33,7 @@ const FourSteps = () => {
                         <p className="steps-intructions-text">kurier przyjedzie w dogodnym terminie</p>
                     </article>
                 </div>
-                <div className="steps-intructions-cta"><Link to="/signin" className="steps-intructions-cta-btn">oddaj rzeczy</Link></div>
+                <div className="steps-intructions-cta"><Link to="/donate-stuff" className="steps-intructions-cta-btn">oddaj rzeczy</Link></div>
             </section>
         </>
     );

@@ -18,6 +18,9 @@
     &:hover {
         border: 1px solid $yellowish;
     }
+    &:nth-child(1):hover {
+        border: 1px solid transparent;
+    }
 }
 
 

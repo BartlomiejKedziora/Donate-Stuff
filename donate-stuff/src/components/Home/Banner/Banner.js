@@ -10,8 +10,8 @@ const Banner = () => {
                 <h2 className="header-title">Oddaj niechciane rzeczy w zaufane ręce</h2>
                 <div className="header-decor"></div>
                 <div className="header-cta">
-                    <Link to="/signin" className="header-cta-btn">Oddaj rzeczy</Link>
-                    <Link to="/signin" className="header-cta-btn">Zorganizuj zbiórkę</Link>
+                    <Link to="/donate-stuff" className="header-cta-btn">Oddaj rzeczy</Link>
+                    <Link to="/donate-stuff" className="header-cta-btn">Zorganizuj zbiórkę</Link>
                 </div>
             </div>   
         </header>

@@ -67,11 +67,16 @@ const SignIn = () => {
                 /*reset form, reset error msg*/
                 setSignInForm(initialState);
                 setFormError(null);
-                history.push('/donate-stuff');
+                history.push('/');
             })
             .catch(error => {
-                setFormError(errorMsg)
-                console.log("błąd");
+                console.log(error);
+                switch (error.code) {
+                        case "auth/user-not-found": 
+                        return setFormError("Nie ma takiego użytkownika")
+                        case "auth/wrong-password": 
+                        return setFormError("Błędne hasło")
+                    }
             });        
     }
 
