@@ -7,18 +7,11 @@ import { FirebaseContext } from './../../Firebase/index';
 const NavLoggedIn = () => {
 
     const firebase = useContext(FirebaseContext);
-    const history = useHistory();
+    // const history = useHistory();
 
-    const handleClick = (e) => {
-        /*firebase auth*/
-        firebase.doSignOut
-            .then(authUser => {
-                history.push('/signout');
-            })
-            .catch(error => {
-                console.log("błąd");
-            });     
-    }
+    // const handleClick = (e) => {
+    //     firebase.doSignOut();
+    // }
 
     return(
         <>
@@ -31,7 +24,7 @@ const NavLoggedIn = () => {
                         <HashLink smooth to="/donate-stuff/#donate-form">Oddaj rzeczy</HashLink>
                     </li>
                     <li className="nav-logged-item">
-                        <Link to="/signout" noClick={handleClick}>Wyloguj</Link>
+                        <Link to="/signout" onClick={() => firebase.doSignOut()}>Wyloguj</Link>
                     </li>
                 </ul>
             </div>
