@@ -4,15 +4,20 @@ Donate-stuff app is a React built website. It is a draft of a platform where you
 
 ## Functionalities
 
-RWD website - built according to Mobile First approach
+RWD website - built according to Mobile First approach.
+
 Landing page contains contact form sending message via EmailJS to admin mailbox and auto-response to the sender.
+
 Trusted organizations are listed in 3 tabs with pagination.
+
 Sign Up, Sign In options with validation are authenticated with Firebase. Entry to donation form is authorized for logged in users only.
 
 ## Technologies
 
 Layout and functionality is built with ReactJS.
+
 Authentication is processed with Firebase.
+
 Email service is provided with EmailJS.
 
 ## Other information
