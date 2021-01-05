@@ -6,7 +6,7 @@ const DonForm4 = () => {
         <>
             <div className="donForm4">
                 <p className="donate-form-steps">Krok 4/4</p>
-                <p className="donForm1-title">Podaj adres oraz termin odbioru rzeczy przez kuriera</p>
+                <h2 className="donForm1-title">Podaj adres oraz termin odbioru rzeczy przez kuriera</h2>
                 <form className="donForm4-form">
                     <div className="donForm4-form-left">
                         <p className="donForm4-form-left-title">Adres odbioru:</p>

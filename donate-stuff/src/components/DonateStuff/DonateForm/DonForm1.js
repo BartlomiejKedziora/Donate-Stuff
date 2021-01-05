@@ -7,7 +7,7 @@ const DonForm1 = () => {
             <div className="donForm1">
                 <p className="donate-form-steps">Krok 1/4</p>
                 <div className="donForm1-checkbox-list">
-                    <p className="donForm1-title">Zaznacz co chcesz oddać:</p>
+                    <h2 className="donForm1-title">Zaznacz co chcesz oddać:</h2>
                     <div className="donForm1-checkbox-item">
                         <label className="donForm1-checkbox-label">
                             <input type="checkbox" className="donForm1-checkbox-input" />

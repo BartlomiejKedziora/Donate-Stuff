@@ -7,7 +7,7 @@ const DonForm2 = () => {
             <div className="donForm2">
                 <p className="donate-form-steps">Krok 2/4</p>
                 <div className="donForm2-select-box">
-                    <p className="donForm1-title">Zaznacz co chcesz oddać:</p>
+                    <h2 className="donForm1-title">Zaznacz co chcesz oddać:</h2>
                     <label className="donForm2-select-label">Liczba 60l worków:  </label>
                     <select className="donForm2-select-list">
                         <option value="" selected> --- wybierz --- </option>

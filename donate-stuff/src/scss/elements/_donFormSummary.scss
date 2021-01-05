@@ -1,0 +1,62 @@
+.donFormSum {
+    width: 60%;
+    height: 85%;
+    padding: 30px 30px 30px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.donFormSum-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.donFormSum-gifts-title, .donFormSum-details-left-title, .donFormSum-details-right-title {
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.gifts-bags p {
+    padding-left: 40px;
+    vertical-align: middle;
+}
+
+.gifts-bags::before, .gifts-location::before {
+    display: inline-block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.gifts-bags::before {
+    background-image: url(./../../assets/Icon-1.svg);
+}
+
+.gifts-location::before {
+    background-image: url(./../../assets/Icon-2.svg);
+}
+
+.donFormSum-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.donFormSum-details-left {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.donFormSum-details-right {
+    width: 50%;
+    padding-right: 40px;
+}
+
+.donFormSum-details-item, .donFormSum-gifts {
+    padding: 5px 0;
+    line-height: 1.4rem;
+}
