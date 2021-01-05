@@ -1,0 +1,71 @@
+.donForm1 {
+    width: 60%;
+    height: 85%;
+    padding: 30px 30px 30px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.donate-form-steps {
+    font-size: 0.9rem;
+    padding-bottom: 20px;
+}
+
+.donForm1-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 30px 0;
+}
+
+.donForm1-btn {
+    width: 50px;
+    cursor: pointer;
+    border: 1px solid $dark-grey;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.donForm1-checkbox-list {
+    padding-bottom: 30px;
+}
+
+.donForm1-checkbox-label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.donForm1-checkbox-input {
+    height: 0;
+    width: 0;
+    position: absolute;
+    opacity: 0;
+}
+
+.donForm1-checkbox-text {
+    text-align: left;
+    text-decoration: none;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    line-height: 24px;
+}
+
+.donForm1-checkbox-span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: $light-blue;
+    border: 1px solid $dark-grey;
+    border-radius: 2px;
+}
+
+.donForm1-checkbox-span:hover {
+    background-color: $yellowish;
+}
+
+.donForm1-checkbox-input:checked ~ .donForm1-checkbox-span {
+    background-color: $yellowish;
+}
