@@ -1,0 +1,21 @@
+.donForm2 {
+    width: 60%;
+    height: 85%;
+    padding: 30px 30px 30px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.donForm2-select-box {
+    padding-bottom: 200px;
+}
+
+.donForm2-select-list {
+    width: 150px;
+    padding: 5px;
+    text-align: right;
+    background-color: $light-blue;
+    line-height: 1.2rem;
+    border-radius: 2px;
+}

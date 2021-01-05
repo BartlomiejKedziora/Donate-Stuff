@@ -1,0 +1,42 @@
+.donForm4 {
+    width: 60%;
+    height: 85%;
+    padding: 30px 30px 30px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.donForm4-form {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.donForm4-form-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.donForm4-form-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.donForm4-form-left-title, .donForm4-form-right-title {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.donForm4-form-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.donForm4-form-label {
+    padding-right: 30px;
+}

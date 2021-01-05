@@ -19,11 +19,13 @@
 }
 
 .donForm1-btn {
-    width: 50px;
+    display: inline-block;
+    width: 60px;
     cursor: pointer;
     border: 1px solid $dark-grey;
     padding: 10px 20px;
     text-align: center;
+    margin-right: 20px;
 }
 
 .donForm1-checkbox-list {
