@@ -1,0 +1,35 @@
+.header-donate {
+    background-image: url(./../../assets/Form-Hero-Image.jpg);
+}
+
+.header-bckg-donate {
+    background-image: url(./../../assets/Form-Hero-Image.jpg);
+    background-position: 50%;
+}
+
+.header-subtitle {
+    z-index: 5;
+    padding-bottom: 40px;
+    font-size: 1.3rem;
+}
+
+.header-sqrs {
+    z-index: 5;
+    display: flex;
+}
+
+.header-sqrs-item {
+    width: 140px;
+    height: 140px;
+    border: 1px solid $dark-grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: rotate(45deg);
+}
+
+.header-sqrs-txt {
+    width: 80px;
+    transform: rotate(-45deg);
+}
