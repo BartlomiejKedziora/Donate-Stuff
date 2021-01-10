@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 
-const DonForm1 = () => {
+const DonForm1 = ({change, values}) => {
+
+    const [pageNumber, setPageNumber] = useState(values);
+
+    const handleForward = (e) => {
+        change({...pageNumber, step: +pageNumber.step + 1})
+    }
 
     return(
         <>
@@ -44,7 +50,7 @@ const DonForm1 = () => {
                         </label>
                     </div>
                 </div>
-                <span className="donForm1-btn">Dalej</span>
+                <span className="donForm1-btn" onClick={handleForward}>Dalej</span>
             </div>
         </>
     );
