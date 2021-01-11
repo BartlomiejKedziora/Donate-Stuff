@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
 
-const DonForm2 = ({change, values}) => {
+const DonForm2 = ({ change, values }) => {
 
-    const [pageNumber, setPageNumber] = useState(values);
+    const [state, setState] = useState(values);
+
+    const handleChange = ({ target: { value, name } }) => {
+        setState(prev => ({
+            ...prev,
+            [name]: value
+        }))
+    }
 
     const handleBack = (e) => {
-        change({...pageNumber, step: +pageNumber.step - 1})
+        change({...state, step: +state.step - 1})
     }
     
     const handleForward = (e) => {
-        change({...pageNumber, step: +pageNumber.step + 1})
+        change({...state, step: +state.step + 1})
+        console.log(state);
     }
 
     return(
@@ -19,8 +27,8 @@ const DonForm2 = ({change, values}) => {
                 <div className="donForm2-select-box">
                     <h2 className="donForm1-title">Zaznacz co chcesz oddać:</h2>
                     <label className="donForm2-select-label">Liczba 60l worków:  </label>
-                    <select className="donForm2-select-list">
-                        <option value="" selected> --- wybierz --- </option>
+                    <select className="donForm2-select-list" name="liczbaWorków" onChange={handleChange}>
+                        <option value=""> --- wybierz --- </option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>

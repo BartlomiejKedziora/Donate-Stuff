@@ -1,15 +1,26 @@
 import React, { useState } from 'react';
 
-const DonForm3 = ({change, values}) => {
+const DonForm3 = ({ change, values }) => {
 
-    const [pageNumber, setPageNumber] = useState(values);
+    const [state, setState] = useState(values);
+
+    console.log("3formState:" + state);
+    console.log("3values:" + values);
+
+    const handleChange = ({ target: { value, name } }) => {
+        setState(prev => ({
+            ...prev,
+            [name]: value
+        }))
+    }
 
     const handleBack = (e) => {
-        change({...pageNumber, step: +pageNumber.step - 1})
+        change({...state, step: +state.step - 1})
     }
     
     const handleForward = (e) => {
-        change({...pageNumber, step: +pageNumber.step + 1})
+        change({...state, step: +state.step + 1})
+        console.log(state);
     }
 
     return(
@@ -18,8 +29,8 @@ const DonForm3 = ({change, values}) => {
                 <p className="donate-form-steps">Krok 3/4</p>
                 <div className="donForm3-select-box">
                     <h2 className="donForm3-title">Lokalizacja:</h2>
-                    <select className="donForm3-select-list">
-                        <option value="" selected> --- wybierz --- </option>
+                    <select className="donForm3-select-list" name="miejsceOdbioru" onChange={handleChange}>
+                        <option value=""> --- wybierz --- </option>
                         <option value="Kraków">Kraków</option>
                         <option value="Warszawa">Warszawa</option>
                         <option value="Poznań">Poznań</option>
@@ -30,29 +41,29 @@ const DonForm3 = ({change, values}) => {
                 <div className="donForm3-checkbox-list">
                     <p className="donForm3-checkbox-title">Komu chcesz pomóc?</p>
                         <label className="donForm3-checkbox-label">
-                            <input type="checkbox" className="donForm3-checkbox-input" />
+                            <input type="checkbox" className="donForm3-checkbox-input" name="odbiorcy1" onChange={handleChange} value={"dzieciom"} />
                             <span className="donForm3-checkbox-text">dzieciom</span>
                         </label>
                         <label className="donForm3-checkbox-label">
-                            <input type="checkbox" className="donForm3-checkbox-input" />
+                            <input type="checkbox" className="donForm3-checkbox-input" name="odbiorcy2" onChange={handleChange} value={"samotnym matkom"} />
                             <span className="donForm3-checkbox-text">samotnym matkom</span>
                         </label>
                         <label className="donForm3-checkbox-label">
-                            <input type="checkbox" className="donForm3-checkbox-input" />
+                            <input type="checkbox" className="donForm3-checkbox-input" name="odbiorcy3" onChange={handleChange} value={"bezdomnym"} />
                             <span className="donForm3-checkbox-text">bezdomnym</span>
                         </label>
                         <label className="donForm3-checkbox-label">
-                            <input type="checkbox" className="donForm3-checkbox-input" />
+                            <input type="checkbox" className="donForm3-checkbox-input" name="odbiorcy4" onChange={handleChange} value={"niepełnosprawnym"} />
                             <span className="donForm3-checkbox-text">niepełnosprawnym</span>
                         </label>
                         <label className="donForm3-checkbox-label">
-                            <input type="checkbox" className="donForm3-checkbox-input" />
+                            <input type="checkbox" className="donForm3-checkbox-input" name="odbiorcy5" onChange={handleChange} value={"osobom starszym"} />
                             <span className="donForm3-checkbox-text">osobom starszym</span>
                         </label>
                 </div>
                 <div className="donForm3-question">
                     <p className="donForm3-checkbox-title">Wpisz nazwę konkretnej organizacji (opcjonalnie)</p>
-                    <input className="donForm3-question-input" type="text" />
+                    <input className="donForm3-question-input" type="text" name="odbiorcaOrg" onChange={handleChange} value={state.odbiorcaOrg} />
                 </div>
                 <div className="donate-form-nav">
                     <span className="donForm1-btn" onClick={handleBack}>Wstecz</span>

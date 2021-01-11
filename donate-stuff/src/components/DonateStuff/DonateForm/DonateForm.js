@@ -10,29 +10,31 @@ import DonFormThx from './DonFormThx';
 
 const DonateForm = () => {
 
-    const [pageNumber, setPageNumber] = useState({step:1});
+    const [state, setState] = useState({
+        step: 1
+    }) 
 
-    const handleChange = (values) => {
-        setPageNumber(prev => ({
+    const handleChange = values => {
+        setState(prev => ({
             ...prev,
             ...values
         }))
     }
 
     const getForm = () => {
-        switch (pageNumber.step) {
+        switch (state.step) {
             case 1: 
-                return <DonForm1 change={handleChange} values={pageNumber} />
+                return <DonForm1 change={handleChange} values={state}  />
             case 2: 
-                return <DonForm2 change={handleChange} values={pageNumber} />
+                return <DonForm2 change={handleChange} values={state} />
             case 3: 
-                return <DonForm3 change={handleChange} values={pageNumber} />
+                return <DonForm3 change={handleChange} values={state} />
             case 4: 
-                return <DonForm4 change={handleChange} values={pageNumber} />
+                return <DonForm4 change={handleChange} values={state} />
             case 5: 
-                return <DonFormSummary change={handleChange} values={pageNumber} />
+                return <DonFormSummary change={handleChange} values={state} />
             case 6: 
-                return <DonFormThx change={handleChange} values={pageNumber} />
+                return <DonFormThx change={handleChange} values={state} />
             default:
                 return <div />
         }
