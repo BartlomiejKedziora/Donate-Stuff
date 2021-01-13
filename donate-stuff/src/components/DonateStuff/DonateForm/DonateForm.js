@@ -1,18 +1,24 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import DonForm1 from './DonForm1';
 import DonForm2 from './DonForm2';
 import DonForm3 from './DonForm3';
 import DonForm4 from './DonForm4';
 import DonFormSummary from './DonFormSummary';
 import DonFormThx from './DonFormThx';
+import {AuthContext} from './../../Auth/Auth';
 
 
 
 const DonateForm = () => {
 
+    const currentUser = useContext(AuthContext);
+
     const [state, setState] = useState({
+        user: currentUser.email,
         step: 1
     }) 
+
+    console.log();
 
     const handleChange = values => {
         setState(prev => ({
