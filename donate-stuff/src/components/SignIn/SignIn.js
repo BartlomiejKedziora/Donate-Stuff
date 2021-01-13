@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from './../Home/Navigation/Navigation';
 import ErrorMessage from './../Home/Contact/ErrorMessage';
-import NavLoggedIn from '../DonateStuff/DonateNavigation/NavLoggedIn';
 import { useHistory } from "react-router-dom";
 import { FirebaseContext } from '../Firebase/index';
 

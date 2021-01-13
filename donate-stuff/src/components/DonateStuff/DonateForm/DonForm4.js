@@ -17,7 +17,6 @@ const DonForm4 = ({change, values}) => {
     
     const handleForward = (e) => {
         change({...state, step: +state.step + 1})
-        console.log(state);
     }
 
     return(

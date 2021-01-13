@@ -18,8 +18,6 @@ const DonateForm = () => {
         step: 1
     }) 
 
-    console.log();
-
     const handleChange = values => {
         setState(prev => ({
             ...prev,

@@ -17,7 +17,6 @@ const DonForm2 = ({ change, values }) => {
     
     const handleForward = (e) => {
         change({...state, step: +state.step + 1})
-        console.log(state);
     }
 
     return(
@@ -27,7 +26,7 @@ const DonForm2 = ({ change, values }) => {
                 <div className="donForm2-select-box">
                     <h2 className="donForm1-title">Zaznacz co chcesz oddać:</h2>
                     <label className="donForm2-select-label">Liczba 60l worków:  </label>
-                    <select className="donForm2-select-list" name="liczbaWorków" onChange={handleChange}>
+                    <select className="donForm2-select-list" name="liczbaWorkow" onChange={handleChange}>
                         <option value=""> --- wybierz --- </option>
                         <option value="1">1</option>
                         <option value="2">2</option>

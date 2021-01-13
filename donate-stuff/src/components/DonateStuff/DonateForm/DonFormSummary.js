@@ -1,8 +1,35 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import Firebase from './../../Firebase/Firebase';
+import FirebaseContext from './../../Firebase/Context';
+
 
 const DonFormSummary = ({change, values}) => {
 
     const [state, setState] = useState(values);
+
+    const firebase = useContext(FirebaseContext);
+
+    const sendDonateForm = (e) => {
+        const db = firebase.firestore();
+
+        db.settings({
+            timestampsInSnapshots: true
+          });
+          const userRef = db.collection('stuff').add({
+            user: state.user,
+            uwagi: state.uwagi,
+            odbiorcy1: state.odbiorcy1,
+            odbiorcaOrg: state.odbiorcaOrg,
+            miasto: state.miasto,
+            liczbaWorkow: state.liczbaWorków
+          })
+          .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+    } 
 
     const handleBack = (e) => {
         change({...state, step: +state.step - 1})
@@ -10,6 +37,8 @@ const DonFormSummary = ({change, values}) => {
     
     const handleForward = (e) => {
         change({...state, step: +state.step + 1})
+        console.log(state);
+        sendDonateForm();
     }
 
     return(
@@ -18,7 +47,7 @@ const DonFormSummary = ({change, values}) => {
                 <h2 className="donFormSum-title">Podsumowanie Twojej darowizny</h2>
                 <div className="donFormSum-gifts">
                     <p className="donFormSum-gifts-title">Oddajesz:</p>
-                    <p className="donFormSum-gifts gifts-bags">{state.liczbaWorków} worki
+                    <p className="donFormSum-gifts gifts-bags">{state.liczbaWorkow} worki
                     {state.rzeczy1===undefined?"":", " + state.rzeczy1}
                     {state.rzeczy2===undefined?"":", " + state.rzeczy2}
                     {state.rzeczy3===undefined?"":", " + state.rzeczy3}
@@ -48,7 +77,7 @@ const DonFormSummary = ({change, values}) => {
                 </div>
                 <div className="donate-form-nav">
                     <span className="donForm1-btn" onClick={handleBack}>Wstecz</span>
-                    <span className="donForm1-btn" onClick={handleForward}>Dalej</span>
+                    <span className="donForm1-btn" onClick={handleForward}>Wyślij</span>
                 </div>
             </div>
         </>

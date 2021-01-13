@@ -4,9 +4,6 @@ const DonForm3 = ({ change, values }) => {
 
     const [state, setState] = useState(values);
 
-    console.log("3formState:" + state);
-    console.log("3values:" + values);
-
     const handleChange = ({ target: { value, name } }) => {
         setState(prev => ({
             ...prev,
@@ -20,7 +17,6 @@ const DonForm3 = ({ change, values }) => {
     
     const handleForward = (e) => {
         change({...state, step: +state.step + 1})
-        console.log(state);
     }
 
     return(

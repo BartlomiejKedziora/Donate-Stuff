@@ -4,10 +4,6 @@ const DonForm1 = ({ change, values }) => {
 
     const [state, setState] = useState(values);
 
-    console.log(state);
-    console.log(values);
-
-
     const handleChange = ({ target: { value, name } }) => {
         setState(prev => ({
             ...prev,
