@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Donate-Stuff/donate-stuff/static/css/main.06987b1a.chunk.css",
-    "main.js": "/Donate-Stuff/donate-stuff/static/js/main.002f90dc.chunk.js",
-    "main.js.map": "/Donate-Stuff/donate-stuff/static/js/main.002f90dc.chunk.js.map",
-    "runtime-main.js": "/Donate-Stuff/donate-stuff/static/js/runtime-main.e55a9d04.js",
-    "runtime-main.js.map": "/Donate-Stuff/donate-stuff/static/js/runtime-main.e55a9d04.js.map",
-    "static/js/2.3ea912f8.chunk.js": "/Donate-Stuff/donate-stuff/static/js/2.3ea912f8.chunk.js",
-    "static/js/2.3ea912f8.chunk.js.map": "/Donate-Stuff/donate-stuff/static/js/2.3ea912f8.chunk.js.map",
-    "static/js/3.6c94b211.chunk.js": "/Donate-Stuff/donate-stuff/static/js/3.6c94b211.chunk.js",
-    "static/js/3.6c94b211.chunk.js.map": "/Donate-Stuff/donate-stuff/static/js/3.6c94b211.chunk.js.map",
-    "index.html": "/Donate-Stuff/donate-stuff/index.html",
-    "static/css/main.06987b1a.chunk.css.map": "/Donate-Stuff/donate-stuff/static/css/main.06987b1a.chunk.css.map",
-    "static/js/2.3ea912f8.chunk.js.LICENSE.txt": "/Donate-Stuff/donate-stuff/static/js/2.3ea912f8.chunk.js.LICENSE.txt",
-    "static/media/main.scss": "/Donate-Stuff/donate-stuff/static/media/Signature.8f2a001d.svg"
+    "main.css": "/donate-stuff/static/css/main.05201eb7.chunk.css",
+    "main.js": "/donate-stuff/static/js/main.002f90dc.chunk.js",
+    "main.js.map": "/donate-stuff/static/js/main.002f90dc.chunk.js.map",
+    "runtime-main.js": "/donate-stuff/static/js/runtime-main.fc3fdcf4.js",
+    "runtime-main.js.map": "/donate-stuff/static/js/runtime-main.fc3fdcf4.js.map",
+    "static/js/2.a156526f.chunk.js": "/donate-stuff/static/js/2.a156526f.chunk.js",
+    "static/js/2.a156526f.chunk.js.map": "/donate-stuff/static/js/2.a156526f.chunk.js.map",
+    "static/js/3.6c94b211.chunk.js": "/donate-stuff/static/js/3.6c94b211.chunk.js",
+    "static/js/3.6c94b211.chunk.js.map": "/donate-stuff/static/js/3.6c94b211.chunk.js.map",
+    "index.html": "/donate-stuff/index.html",
+    "static/css/main.05201eb7.chunk.css.map": "/donate-stuff/static/css/main.05201eb7.chunk.css.map",
+    "static/js/2.a156526f.chunk.js.LICENSE.txt": "/donate-stuff/static/js/2.a156526f.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/donate-stuff/static/media/Signature.8f2a001d.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e55a9d04.js",
-    "static/js/2.3ea912f8.chunk.js",
-    "static/css/main.06987b1a.chunk.css",
+    "static/js/runtime-main.fc3fdcf4.js",
+    "static/js/2.a156526f.chunk.js",
+    "static/css/main.05201eb7.chunk.css",
     "static/js/main.002f90dc.chunk.js"
   ]
 }
