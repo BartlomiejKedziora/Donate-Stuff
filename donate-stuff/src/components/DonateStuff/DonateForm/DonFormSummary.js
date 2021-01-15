@@ -38,7 +38,7 @@ const DonFormSummary = ({change, values}) => {
     const handleForward = (e) => {
         change({...state, step: +state.step + 1})
         console.log(state);
-        sendDonateForm();
+        //sendDonateForm();
     }
 
     return(
