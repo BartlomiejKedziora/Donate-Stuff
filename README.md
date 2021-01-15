@@ -12,6 +12,8 @@ Trusted organizations are listed in 3 tabs with pagination.
 
 Sign Up, Sign In options with validation are authenticated with Firebase. Entry to donation form is authorized for logged in users only.
 
+Multi-step donation form collect all information, show a summary and send it to Firestore database.
+
 ## Technologies
 
 Layout and functionality is built with ReactJS.
@@ -24,4 +26,4 @@ Email service is provided with EmailJS.
 
 Main idea of the project is to practice React JS and develop my portfolio.
 
-Work in progress: multi-step donation form with connection to Firestore.
+Work in progress: connection to Firestore.
